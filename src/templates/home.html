@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block head_title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <p>this is the home page</p>
+  
+  {% if user.is_authenticated %}
+    <h1>User data onely</h1>
+    {{user}} is logged in
+  {% endif %}
+  {% for i in my_list %}
+    <li>{{ i }}</li>
+  {% endfor %}
+{% endblock %}

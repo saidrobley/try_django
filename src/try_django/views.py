@@ -4,8 +4,9 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    my_title = "Hi there...."
-    return render(request, "hello_world.html", {"title": my_title})
+    my_title = "Home"
+    context = {"title": my_title, "my_list": [1, 2, 3, 4]}
+    return render(request, "home.html", context)
 
 
 def about_page(request):
